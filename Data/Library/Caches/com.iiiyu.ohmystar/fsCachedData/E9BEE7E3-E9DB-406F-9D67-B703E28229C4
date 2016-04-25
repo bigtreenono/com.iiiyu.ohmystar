@@ -1,0 +1,132 @@
+<div class="announce instapaper_body md" data-path="README.md" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-fbretaincycledetector" class="anchor" href="#fbretaincycledetector" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>FBRetainCycleDetector</h1>
+
+<p><a href="https://travis-ci.org/facebook/FBRetainCycleDetector"><img src="https://camo.githubusercontent.com/acf9afdfd49713631cd518bd316ac7dd7c116ba3/68747470733a2f2f7472617669732d63692e6f72672f66616365626f6f6b2f464252657461696e4379636c654465746563746f722e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/facebook/FBRetainCycleDetector.svg?branch=master" style="max-width:100%;"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://camo.githubusercontent.com/3dc8a44a2c3f7ccd5418008d1295aae48466c141/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f43617274686167652d636f6d70617469626c652d3442433531442e7376673f7374796c653d666c6174" alt="Carthage compatible" data-canonical-src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" style="max-width:100%;"></a>
+<a href=""><img src="https://camo.githubusercontent.com/2793c88d3d95fb1d46c104827253b7e192df23aa/68747470733a2f2f696d672e736869656c64732e696f2f636f636f61706f64732f762f464252657461696e4379636c654465746563746f722e7376673f6d61784167653d32353932303030" alt="CocoaPods" data-canonical-src="https://img.shields.io/cocoapods/v/FBRetainCycleDetector.svg?maxAge=2592000" style="max-width:100%;"></a>
+<a href="https://github.com/facebook/FBRetainCycledetector/blob/master/LICENSE"><img src="https://camo.githubusercontent.com/6527afab065543cbfb3c5c778f8905c6bb92750a/68747470733a2f2f696d672e736869656c64732e696f2f636f636f61706f64732f6c2f464252657461696e4379636c654465746563746f722e737667" alt="License" data-canonical-src="https://img.shields.io/cocoapods/l/FBRetainCycleDetector.svg" style="max-width:100%;"></a></p>
+
+<p>An iOS library that finds retain cycles using runtime analysis.</p>
+
+<h2><a id="user-content-about" class="anchor" href="#about" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>About</h2>
+
+<p>Retain cycles are one of the most common ways of creating memory leaks. It's incredibly easy to create a retain cycle, and tends to be hard to spot it.
+The goal of FBRetainCycleDetector is to help find retain cycles at runtime.
+The features of this project were influenced by <a href="https://github.com/mikeash/Circle">Circle</a>.</p>
+
+<h2><a id="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Installation</h2>
+
+<h3><a id="user-content-carthage" class="anchor" href="#carthage" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Carthage</h3>
+
+<p>To your Cartfile add: </p>
+
+<pre><code>github "facebook/FBRetainCycleDetector"
+</code></pre>
+
+<p><code>FBRetainCycleDetector</code> is built out from non-debug builds, so when you want to test it, use </p>
+
+<pre><code>carthage update --configuration Debug
+</code></pre>
+
+<h3><a id="user-content-cocoapods" class="anchor" href="#cocoapods" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>CocoaPods</h3>
+
+<p>To your podspec add:</p>
+
+<pre><code>pod 'FBRetainCycleDetector'
+</code></pre>
+
+<p>You'll be able to use <code>FBRetainCycleDetector</code> fully only in <code>Debug</code> builds. This is controlled by <a href="https://github.com/facebook/FBRetainCycleDetector/blob/master/FBRetainCycleDetector/Detector/FBRetainCycleDetector.h#L83">compilation flag</a> that can be provided to the build to make it work in other configurations.</p>
+
+<h2><a id="user-content-example-usage" class="anchor" href="#example-usage" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Example usage</h2>
+
+<p>Let's quickly dive in</p>
+
+<div class="highlight highlight-source-objc"><pre>#<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">&lt;</span>FBRetainCycleDetector/FBRetainCycleDetector.h<span class="pl-pds">&gt;</span></span></pre></div>
+
+<div class="highlight highlight-source-objc"><pre>FBRetainCycleDetector *detector = [FBRetainCycleDetector <span class="pl-c1">new</span>];
+[detector <span class="pl-c1">addCandidate:</span>myObject];
+<span class="pl-c1">NSSet</span> *retainCycles = [detector <span class="pl-c1">findRetainCycles</span>];
+<span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span><span class="pl-pds">"</span></span>, retainCycles);</pre></div>
+
+<p><code>- (NSSet&lt;NSArray&lt;FBObjectiveCGraphElement *&gt; *&gt; *)findRetainCycles</code> will return a set of arrays of wrapped objects. It's pretty hard to look at at first, but let's go through it. Every array in this set will represent one retain cycle. Every element in this array is a wrapper around one object in this retain cycle. Check <a href="https://github.com/facebook/FBRetainCycleDetector/blob/master/FBRetainCycleDetector/Graph/FBObjectiveCGraphElement.h">FBObjectiveCGraphElement</a>.</p>
+
+<p>Example output could look like this:</p>
+
+<pre><code>{(
+    (
+        "-&gt; MyObject ",
+        "-&gt; _someObject -&gt; __NSArrayI "
+    )
+)}
+</code></pre>
+
+<p><code>MyObject</code> through <code>someObject</code> property retained <code>NSArray</code> that it was a part of.</p>
+
+<p>FBRetainCycleDetector will look for cycles that are no longer than 10 objects.
+We can make it bigger (although it's going to be slower!).</p>
+
+<div class="highlight highlight-source-objc"><pre>FBRetainCycleDetector *detector = [FBRetainCycleDetector <span class="pl-c1">new</span>];
+[detector <span class="pl-c1">addCandidate:</span>myObject];
+<span class="pl-c1">NSSet</span> *retainCycles = [detector <span class="pl-c1">findRetainCyclesWithMaxCycleLength:</span><span class="pl-c1">100</span>];</pre></div>
+
+<h3><a id="user-content-filters" class="anchor" href="#filters" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Filters</h3>
+
+<p>There could also be retain cycles that we would like to omit. It's because not every retain cycle is a leak, and we might want to filter them out.
+To do so we need to specify filters:</p>
+
+<div class="highlight highlight-source-objc"><pre><span class="pl-c1">NSMutableArray</span> *filters = @[
+  <span class="pl-c1">FBFilterBlockWithObjectIvarRelation</span>([UIView <span class="pl-c1">class</span>], <span class="pl-s"><span class="pl-pds">@"</span>_subviewCache<span class="pl-pds">"</span></span>),
+];
+
+<span class="pl-c">// Configuration object can describe filters as well as some options</span>
+FBObjectGraphConfiguration *configuration =
+[[FBObjectGraphConfiguration <span class="pl-c1">alloc</span>] <span class="pl-c1">initWithFilterBlocks:</span>filters
+                                     <span class="pl-c1">shouldInspectTimers:</span><span class="pl-c1">YES</span>];
+FBRetainCycleDetector *detector = [[FBRetainCycleDetector <span class="pl-c1">alloc</span>] <span class="pl-c1">initWithConfiguration:</span>configuration];
+[detector <span class="pl-c1">addCandidate:</span>myObject];
+<span class="pl-c1">NSSet</span> *retainCycles = [detector <span class="pl-c1">findRetainCycles</span>];</pre></div>
+
+<p>Every filter is a block that having two <code>FBObjectiveCGraphElement</code> objects can say, if their relation is valid.</p>
+
+<p>Check <a href="FBRetainCycleDetector/Filters/FBStandardGraphEdgeFilters.h">FBStandardGraphEdgeFilters</a> to learn more about how to use filters.</p>
+
+<h3><a id="user-content-nstimer" class="anchor" href="#nstimer" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>NSTimer</h3>
+
+<p>NSTimer can be troublesome as it will retain it's target. Oftentimes it means a retain cycle. <code>FBRetainCycleDetector</code> can detect those,
+but if you want to skip them, you can specify that in the configuration you are passing to <code>FBRetainCycleDetector</code>.</p>
+
+<div class="highlight highlight-source-objc"><pre>FBObjectGraphConfiguration *configuration =
+[[FBObjectGraphConfiguration <span class="pl-c1">alloc</span>] <span class="pl-c1">initWithFilterBlocks:</span>someFilters
+                                     <span class="pl-c1">shouldInspectTimers:</span><span class="pl-c1">NO</span>];
+FBRetainCycleDetector *detector = [[FBRetainCycleDetector <span class="pl-c1">alloc</span>] <span class="pl-c1">initWithConfiguration:</span>configuration];</pre></div>
+
+<h3><a id="user-content-associations" class="anchor" href="#associations" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Associations</h3>
+
+<p>Objective-C let's us set associated objects for every object using <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/#//apple_ref/c/func/objc_setAssociatedObject">objc_setAssociatedObject</a>.</p>
+
+<p>These associated objects can lead to retain cycles if we use retaining policies, like <code>OBJC_ASSOCIATION_RETAIN_NONATOMIC</code>. FBRetainCycleDetector can catch these kinds of cycles, but to do so we need to set it up. Early in the application's lifetime, preferably in <code>main.m</code> we can add this:</p>
+
+<div class="highlight highlight-source-objc"><pre>#<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">&lt;</span>FBRetainCycleDetector/FBAssociationManager.h<span class="pl-pds">&gt;</span></span>
+
+<span class="pl-k">int</span> <span class="pl-en">main</span>(<span class="pl-k">int</span> argc, <span class="pl-k">char</span> * argv[]) {
+  @autoreleasepool {
+    [FBAssociationManager <span class="pl-c1">hook</span>];
+    <span class="pl-k">return</span> <span class="pl-c1">UIApplicationMain</span>(argc, argv, <span class="pl-c1">nil</span>, <span class="pl-c1">NSStringFromClass</span>([AppDelegate <span class="pl-c1">class</span>]));
+  }
+}</pre></div>
+
+<p>In the code above <code>[FBAssociationManager hook]</code> will use <a href="https://github.com/facebook/fishhook">fishhook</a> to interpose functions <code>objc_setAssociatedObject</code> and <code>objc_resetAssociatedObjects</code> to track associations before they are made.</p>
+
+<h2><a id="user-content-getting-candidates" class="anchor" href="#getting-candidates" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Getting Candidates</h2>
+
+<p>If you want to profile your app, you might want to have an abstraction over how to get candidates for <code>FBRetainCycleDetector</code>. While you can simply track it your own, you can also use <a href="https://github.com/facebook/FBAllocationTracker">FBAllocationTracker</a>. It's a small tool we created that can help you track the objects. It offers simple API that you can query for example for all instances of given class, or all class names currently tracked, etc.</p>
+
+<p><code>FBAllocationTracker</code> and <code>FBRetainCycleDetector</code> can work nicely together. We have created a small example and drop-in project called <a href="https://github.com/facebook/FBMemoryProfiler">FBMemoryProfiler</a> that leverages both these projects. It offers you very basic UI that you can use to track all allocations and force retain cycle detection from UI.</p>
+
+<h2><a id="user-content-contributing" class="anchor" href="#contributing" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Contributing</h2>
+
+<p>See the <a href="CONTRIBUTING">CONTRIBUTING</a> file for how to help out.</p>
+
+<h2><a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>License</h2>
+
+<p><a href="LICENSE"><code>FBRetainCycleDetector</code> is BSD-licensed</a>. We also provide an additional <a href="PATENTS">patent grant</a>.</p>
+</article></div>

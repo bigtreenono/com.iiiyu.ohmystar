@@ -1,0 +1,234 @@
+<div class="announce instapaper_body md" data-path="README.md" id="readme"><article class="markdown-body entry-content" itemprop="text"><p align="center">
+ <a href="https://camo.githubusercontent.com/2d93a22d20c752145b5c6571d8c9561d96d09c9d/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f732f3564647835386473657832357835372f736476657273696f6e2d6c6f676f2e706e673f646c3d30" target="_blank"><img src="https://camo.githubusercontent.com/2d93a22d20c752145b5c6571d8c9561d96d09c9d/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f732f3564647835386473657832357835372f736476657273696f6e2d6c6f676f2e706e673f646c3d30" alt="SDVersion" data-canonical-src="https://dl.dropboxusercontent.com/s/5ddx58dsex25x57/sdversion-logo.png?dl=0" style="max-width:100%;"></a>
+</p>
+
+<p align="center">
+    <a href="https://gitter.im/sebyddd/SDiPhoneVersion?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge">
+        <img src="https://camo.githubusercontent.com/9e985aa8b0d2b4d4bf4066bd2f1eadc75f1f814c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769747465722d6a6f696e253230636861742d3164636537332e737667" alt="Gitter" data-canonical-src="https://img.shields.io/badge/gitter-join%20chat-1dce73.svg" style="max-width:100%;">
+    </a>
+    <a href="http://sebastiandobrincu.com">
+        <img src="https://camo.githubusercontent.com/1b269d140f742f79af992302038b793a117a9e16/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706c6174666f726d2d694f532532302537432532304f53582d4430353437462e737667" alt="Platform" data-canonical-src="https://img.shields.io/badge/platform-iOS%20%7C%20OSX-D0547F.svg" style="max-width:100%;">
+    </a>
+    <a href="http://sebastiandobrincu.com">
+        <img src="https://camo.githubusercontent.com/2a5e939460bd4b4f5659347266f9fa0dc3786d16/687474703a2f2f696d672e736869656c64732e696f2f636f636f61706f64732f762f534456657273696f6e2e737667" alt="Cocoapods Version" data-canonical-src="http://img.shields.io/cocoapods/v/SDVersion.svg" style="max-width:100%;">
+    </a>
+</p>
+
+<p>Objective-C library for detecting the running device's model and screen size.</p>
+
+<p>With the newer  devices, developers have more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the ones they want.</p>
+
+<p>SDVersion supports both iOS and Mac OS. Browse through the implementation of each platform using the links below.</p>
+
+<p align="center">
+    <a href="#ios">
+            <img src="https://camo.githubusercontent.com/a529c7297a6de241a7fb538701ab26b79fe778a0/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f732f7761646f676b6d373266767a61786e2f73646970686f6e6576657273696f6e2d6c696e6b2e706e673f646c3d30" alt="iOS" data-canonical-src="https://dl.dropboxusercontent.com/s/wadogkm72fvzaxn/sdiphoneversion-link.png?dl=0" style="max-width:100%;">
+    </a>
+    <a href="#mac-os">
+        <img src="https://camo.githubusercontent.com/693536ed5f741dba6291240b474c363f8c30344d/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f732f796f3736616b686a7576346d6569702f73646d616376657273696f6e2d6c696e6b2e706e673f646c3d30" alt="Mac" data-canonical-src="https://dl.dropboxusercontent.com/s/yo76akhjuv4meip/sdmacversion-link.png?dl=0" style="max-width:100%;">
+    </a>
+</p>
+
+<h2><a id="user-content-how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>How it works</h2>
+
+<div class="highlight highlight-source-objc"><pre>      <span class="pl-c">// Check for device model</span>
+      <span class="pl-k">if</span> ([SDVersion <span class="pl-c1">deviceVersion</span>] == iPhone6S)
+           <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>You got the iPhone 6S. Sweet 🍭!<span class="pl-pds">"</span></span>);
+      <span class="pl-k">else</span> <span class="pl-k">if</span> ([SDVersion <span class="pl-c1">deviceVersion</span>] == iPhone6Plus)
+           <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>iPhone 6 Plus? Bigger is better!<span class="pl-pds">"</span></span>);
+      <span class="pl-k">else</span> <span class="pl-k">if</span> ([SDVersion <span class="pl-c1">deviceVersion</span>] == iPadPro)
+           <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>You own an iPad Pro 🌀!<span class="pl-pds">"</span></span>);
+
+      <span class="pl-c">// Check for device screen size</span>
+      <span class="pl-k">if</span> ([SDVersion <span class="pl-c1">deviceSize</span>] == Screen4inch)
+           <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>Your screen is 4 inches<span class="pl-pds">"</span></span>);
+
+      <span class="pl-c">// Get device name</span>
+      <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span><span class="pl-pds">"</span></span>, DeviceVersionNames[[SDVersion <span class="pl-c1">deviceVersion</span>]]);
+      <span class="pl-c">/* e.g: Outputs 'iPhone 6 Plus' */</span>
+
+      <span class="pl-c">// Check for iOS Version</span>
+      <span class="pl-k">if</span> (iOSVersionGreaterThanOrEqual(<span class="pl-s"><span class="pl-pds">@"</span>8<span class="pl-pds">"</span></span>))
+           <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>You are running iOS 8 or above!<span class="pl-pds">"</span></span>);
+</pre></div>
+
+<h2><a id="user-content-add-to-your-project" class="anchor" href="#add-to-your-project" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Add to your project</h2>
+
+<p>There are 2 ways you can add SDVersion to your project:</p>
+
+<h3><a id="user-content-manual-installation" class="anchor" href="#manual-installation" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Manual installation</h3>
+
+<p>Simply import the 'SDVersion' into your project then import the following in the class you want to use it: </p>
+
+<div class="highlight highlight-source-objc"><pre>       #<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">"</span>SDVersion.h<span class="pl-pds">"</span></span></pre></div>
+
+<h3><a id="user-content-installation-with-cocoapods" class="anchor" href="#installation-with-cocoapods" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Installation with CocoaPods</h3>
+
+<p>CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like SDVersion in your projects. See the "<a href="http://guides.cocoapods.org/syntax/podfile.html">Getting Started</a>" guide for more information.</p>
+
+<h3><a id="user-content-podfile" class="anchor" href="#podfile" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Podfile</h3>
+
+<div class="highlight highlight-source-ruby"><pre>        pod <span class="pl-s"><span class="pl-pds">'</span>SDVersion<span class="pl-pds">'</span></span></pre></div>
+
+<h2><a id="user-content-ios" class="anchor" href="#ios" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>iOS</h2>
+
+<h3><a id="user-content-available-methods" class="anchor" href="#available-methods" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Available methods</h3>
+
+<div class="highlight highlight-source-objc"><pre>    + (DeviceVersion)deviceVersion;
+    + (DeviceSize)deviceSize;
+    + (<span class="pl-c1">NSString</span>*)deviceName;</pre></div>
+
+<h3><a id="user-content-targetable-models" class="anchor" href="#targetable-models" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Targetable models</h3>
+
+<pre><code>iPhone4
+iPhone4S
+iPhone5
+iPhone5C
+iPhone5S
+iPhone6
+iPhone6Plus
+iPhone6S
+iPhone6SPlus
+iPhoneSE
+
+iPad1
+iPad2
+iPadMini
+iPad3
+iPad4
+iPadAir
+iPadMini2
+iPadAir2
+iPadMini3
+iPadMini4
+iPadPro
+
+iPodTouch1Gen
+iPodTouch2Gen
+iPodTouch3Gen
+iPodTouch4Gen
+iPodTouch5Gen
+iPodTouch6Gen
+
+Simulator
+</code></pre>
+
+<h3><a id="user-content-targetable-screen-sizes" class="anchor" href="#targetable-screen-sizes" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Targetable screen sizes</h3>
+
+<pre><code>Screen3Dot5inch
+Screen4inch
+Screen4Dot7inch
+Screen5Dot5inch
+</code></pre>
+
+<h3><a id="user-content-available-ios-version-finder-methods" class="anchor" href="#available-ios-version-finder-methods" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Available iOS Version Finder methods</h3>
+
+<pre><code>iOSVersionEqualTo(@"v")  //E.g: iOSVersionEqualTo(@"8.4.1")
+iOSVersionGreaterThan(@"v")
+iOSVersionGreaterThanOrEqualTo(@"v")
+iOSVersionLessThan(@"v")
+iOSVersionLessThanOrEqualTo(@"v")       
+</code></pre>
+
+<h3><a id="user-content-helpers" class="anchor" href="#helpers" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Helpers</h3>
+
+<div class="highlight highlight-source-objc"><pre>      <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span><span class="pl-pds">"</span></span>, DeviceVersionNames[[SDVersion <span class="pl-c1">deviceVersion</span>]]);
+      <span class="pl-c">/* e.g: Outputs 'iPad Air 2' */</span>
+
+      <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span><span class="pl-pds">"</span></span>, DeviceSizeNames[[SDVersion <span class="pl-c1">deviceSize</span>]]);
+      <span class="pl-c">/* e.g: Outputs '4.7 inch' */</span></pre></div>
+
+<h2><a id="user-content-mac-os" class="anchor" href="#mac-os" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Mac OS</h2>
+
+<div class="highlight highlight-source-objc"><pre>      <span class="pl-c">// Check for device model</span>
+      <span class="pl-k">if</span> ([SDVersion <span class="pl-c1">deviceVersion</span>] == DeviceVersionIMac)
+          <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>So you have a iMac? 💻<span class="pl-pds">"</span></span>);
+      <span class="pl-k">else</span> <span class="pl-k">if</span> ([SDVersion <span class="pl-c1">deviceVersion</span>] == DeviceVersionMacBookPro)
+          <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>You're using a MacBook Pro.<span class="pl-pds">"</span></span>);
+
+      <span class="pl-c">// Check for screen size</span>
+      <span class="pl-k">if</span> ([SDVersion <span class="pl-c1">deviceSize</span>] == Mac27Inch)
+          <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>Whoah! You got a big ass 27 inch screen.<span class="pl-pds">"</span></span>);
+      <span class="pl-k">else</span> <span class="pl-k">if</span> ([SDVersion <span class="pl-c1">deviceSize</span>] == Mac21Dot5Inch)
+          <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>You have a 21.5 inch screen.<span class="pl-pds">"</span></span>);
+
+      <span class="pl-c">// Check for screen resolution</span>
+      <span class="pl-k">if</span> ([SDVersion <span class="pl-c1">deviceScreenResolution</span>] == DeviceScreenRetina)
+          <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>Nice retina screen!<span class="pl-pds">"</span></span>);
+
+      <span class="pl-c">// Get screen resolution in pixels</span>
+      <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span><span class="pl-pds">"</span></span>, DeviceScreenResolutionNames[[SDVersion <span class="pl-c1">deviceScreenResolution</span>]]);
+      <span class="pl-c">/* e.g: Outputs '{2880, 1800}' */</span>
+
+      <span class="pl-c">// Check OSX Version (pass the minor version)</span>
+      <span class="pl-k">if</span>(OSXVersionGreaterThanOrEqualTo(<span class="pl-s"><span class="pl-pds">@"</span>11<span class="pl-pds">"</span></span>))
+           <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>Looks like you are running OSX 10.11 El Capitan or 🆙.<span class="pl-pds">"</span></span>);
+</pre></div>
+
+<h3><a id="user-content-available-methods-1" class="anchor" href="#available-methods-1" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Available methods</h3>
+
+<div class="highlight highlight-source-objc"><pre>    + (DeviceVersion)deviceVersion;
+    + (<span class="pl-c1">NSString</span> *)deviceVersionString;
+    + (DeviceSize)deviceSize;
+    + (<span class="pl-c1">NSSize</span>)deviceScreenResolutionPixelSize;
+    + (DeviceScreenResolution)deviceScreenResolution;</pre></div>
+
+<h3><a id="user-content-targetable-models-1" class="anchor" href="#targetable-models-1" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Targetable models</h3>
+
+<pre><code>DeviceVersionIMac
+DeviceVersionMacMini
+DeviceVersionMacPro
+DeviceVersionMacBook
+DeviceVersionMacBookAir
+DeviceVersionMacBookPro
+DeviceVersionXserve
+</code></pre>
+
+<h3><a id="user-content-targetable-screen-sizes-1" class="anchor" href="#targetable-screen-sizes-1" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Targetable screen sizes</h3>
+
+<pre><code>Mac27Inch
+Mac24Inch
+Mac21Dot5Inch
+Mac20Inch
+Mac17Inch
+Mac15Inch
+Mac13Inch
+Mac12Inch
+Mac11Inch
+</code></pre>
+
+<h3><a id="user-content-targetable-screen-resolutions" class="anchor" href="#targetable-screen-resolutions" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Targetable screen resolutions</h3>
+
+<pre><code>DeviceScreenRetina,
+DeviceScreenNoRetina
+</code></pre>
+
+<h3><a id="user-content-available-osx-version-finder-methods" class="anchor" href="#available-osx-version-finder-methods" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Available OSX Version Finder methods</h3>
+
+<pre><code>OSXVersionEqualTo(@"v")  //E.g: OSXVersionEqualTo(@"11") - OSX 10.11
+OSXVersionGreaterThan(@"v")
+OSXVersionGreaterThanOrEqualTo(@"v")
+OSXVersionLessThan(@"v")
+OSXVersionLessThanOrEqualTo(@"v")        
+/* 'v' must be the minor OS Version. e.g: OSX 10.9 - 'v' is 9 */
+</code></pre>
+
+<h3><a id="user-content-helpers-1" class="anchor" href="#helpers-1" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Helpers</h3>
+
+<div class="highlight highlight-source-objc"><pre>      <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span><span class="pl-pds">"</span></span>, DeviceSizeNames[[SDVersion <span class="pl-c1">deviceSize</span>]]);
+      <span class="pl-c">/* e.g: Outputs '15 inch' */</span>
+
+      <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span><span class="pl-pds">"</span></span>,DeviceScreenResolutionNames[[SDVersion <span class="pl-c1">deviceScreenResolution</span>]])
+      <span class="pl-c">/* e.g: Outputs '{2880, 1800}' */</span></pre></div>
+
+<h2><a id="user-content-special-thanks-to" class="anchor" href="#special-thanks-to" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Special thanks to</h2>
+
+<ul>
+<li>Tom Baranes (Contribution to SDMacVersion)</li>
+<li>Yasir Turk (iOS Version Finder, StackOverflow)</li>
+</ul>
+
+<h2><a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>License</h2>
+
+<p>Usage is provided under the <a href="http://http//opensource.org/licenses/mit-license.php">MIT License</a>. See LICENSE for the full details.</p>
+</article></div>

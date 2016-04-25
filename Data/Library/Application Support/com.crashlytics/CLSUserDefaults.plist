@@ -3,27 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>com.crashlytics.insights.lastmaintenancedate</key>
-	<date>2016-04-25T07:29:39Z</date>
+	<date>2016-04-25T07:49:32Z</date>
 	<key>com.crashlytics.insights.lastsessionidentifier</key>
-	<string>412443a5ecce440c8a79cf8e66d9551e</string>
+	<string>ef1f43eaad6249bd93ff495054d903eb</string>
 	<key>com.crashlytics.insights.lastsessionmetadata</key>
 	<data>
-	eyJidW5kbGVfaWQiOiJjb20uaWlpeXUub2hteXN0YXIiLCJzZXNzaW9uX2lkIjoiNDEy
-	NDQzYTVlY2NlNDQwYzhhNzljZjhlNjZkOTU1MWUiLCJhZHZlcnRpc2luZ190cmFja2lu
+	eyJidW5kbGVfaWQiOiJjb20uaWlpeXUub2hteXN0YXIiLCJzZXNzaW9uX2lkIjoiZWYx
+	ZjQzZWFhZDYyNDliZDkzZmY0OTUwNTRkOTAzZWIiLCJhZHZlcnRpc2luZ190cmFja2lu
 	Z19lbmFibGVkIjpmYWxzZSwibG9jYWxlIjoiZW5fQ04iLCJvc19idWlsZCI6IjE1RTY1
 	IiwibGlua3NfYWRfc3VwcG9ydCI6ZmFsc2UsInBsYXRmb3JtIjoibWFjIiwiZ2VuZXJh
 	dG9yIjoiQW5zd2VycyBtYWMgU0RLXC8wLjkuMSIsInBsYXRmb3JtX2NvZGUiOjAsImNv
 	cmVzIjo0LCJpbnN0YW5jZV9pZCI6ImEyZDZjZWRiMTViZWFjNTVkY2Y1OWFjODAwMWNk
-	NzQxYjI4NjkzMDAiLCJpbnN0YWxsX2lkIjoiMjk5NDkwNjktMzk5Qi00QTg3LTkyREEt
-	RUM2MkFDQTk3NkY3IiwiamFpbGJyb2tlbiI6ZmFsc2UsIm1vZGVsIjoiTWFjQm9va1By
-	bzExLDEiLCJvc192ZXJzaW9uIjoiMTAuMTEuNCIsInN0YXJ0ZWRfYXQiOjE0NjE1NjY2
-	NzYsImJ1bmRsZV92ZXJzaW9uIjoiMTI2MCIsImFwaV9rZXkiOiJlYzU0YTgzOGViZmQw
-	NTg3YzY1OTI2MzZmZDNiYzQ5YWVhYTAwY2JhIiwibWFjaGluZSI6Ik1hY0Jvb2tQcm8x
-	MSwxIiwiYnVuZGxlX3Nob3J0X3ZlcnNpb24iOiIxLjEuOSJ9
+	NzQxYjI4NjkzMDAiLCJpbnN0YWxsX2lkIjoiNzdEQ0M4QUEtNTBGNC00MzcyLTk4MjYt
+	RTUyMzM0QkE1MEE3IiwiamFpbGJyb2tlbiI6ZmFsc2UsIm1vZGVsIjoiaU1hYzE2LDEi
+	LCJvc192ZXJzaW9uIjoiMTAuMTEuNCIsInN0YXJ0ZWRfYXQiOjE0NjE1NzAzNTYsImJ1
+	bmRsZV92ZXJzaW9uIjoiMTI2MCIsImFwaV9rZXkiOiJlYzU0YTgzOGViZmQwNTg3YzY1
+	OTI2MzZmZDNiYzQ5YWVhYTAwY2JhIiwibWFjaGluZSI6ImlNYWMxNiwxIiwiYnVuZGxl
+	X3Nob3J0X3ZlcnNpb24iOiIxLjEuOSJ9
 	</data>
 	<key>com.crashlytics.insights.lastsessiontimestamp</key>
-	<integer>1461566676677</integer>
+	<integer>1461570356093</integer>
 	<key>com.crashlytics.iuuid</key>
-	<string>29949069-399B-4A87-92DA-EC62ACA976F7</string>
+	<string>77DCC8AA-50F4-4372-9826-E52334BA50A7</string>
 </dict>
 </plist>
