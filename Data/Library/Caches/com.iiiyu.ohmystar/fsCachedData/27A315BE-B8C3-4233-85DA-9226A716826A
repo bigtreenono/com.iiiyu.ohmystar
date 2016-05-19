@@ -1,0 +1,115 @@
+<div class="announce instapaper_body md" data-path="README.md" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-zjscrollpageview" class="anchor" href="#zjscrollpageview" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>ZJScrollPageView</h1>
+
+<h4><a id="user-content-oc版的简单方便的集成网易新闻-腾讯视频-头条-等首页的滑块视图联动的效果-segmentview-scrollviewcontroller" class="anchor" href="#oc版的简单方便的集成网易新闻-腾讯视频-头条-等首页的滑块视图联动的效果-segmentview-scrollviewcontroller" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>OC版的简单方便的集成网易新闻, 腾讯视频, 头条 等首页的滑块视图联动的效果, segmentVIew, scrollViewController</h4>
+
+<h3><a id="user-content-swift版本的请点这里" class="anchor" href="#swift版本的请点这里" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>swift版本的请点<a href="https://github.com/jasnig/ScrollPageView">这里</a></h3>
+
+<h4><a id="user-content-注意如果您需要查看详细的注释-可以下载swift版本里面-这里很多地方就没有把注释移过来了" class="anchor" href="#注意如果您需要查看详细的注释-可以下载swift版本里面-这里很多地方就没有把注释移过来了" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>注意,如果您需要查看详细的注释, 可以下载swift版本里面, 这里很多地方就没有把注释移过来了</h4>
+
+<hr>
+
+<h2><a id="user-content-使用示例效果" class="anchor" href="#使用示例效果" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>使用示例效果</h2>
+
+<p><a href="https://camo.githubusercontent.com/ba3736c4fa73e14167767834ba663b98f37a846d/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d656362323931613433643165353230392e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" target="_blank"><img src="https://camo.githubusercontent.com/ba3736c4fa73e14167767834ba663b98f37a846d/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d656362323931613433643165353230392e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" alt="滚动示例1.gif" data-canonical-src="http://upload-images.jianshu.io/upload_images/1271831-ecb291a43d1e5209.gif?imageMogr2/auto-orient/strip" style="max-width:100%;"></a><a href="https://camo.githubusercontent.com/27ca290395716166c66887b5caa7e7ebf6cb4ca1/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d626436373964626538366162373430342e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" target="_blank"><img src="https://camo.githubusercontent.com/27ca290395716166c66887b5caa7e7ebf6cb4ca1/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d626436373964626538366162373430342e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" alt="滚动示例2.gif" data-canonical-src="http://upload-images.jianshu.io/upload_images/1271831-bd679dbe86ab7404.gif?imageMogr2/auto-orient/strip" style="max-width:100%;"></a><a href="https://camo.githubusercontent.com/4542cab2cdb2004d1b584fbd45c5044887dcae46/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d653039346132333231323136303031352e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" target="_blank"><img src="https://camo.githubusercontent.com/4542cab2cdb2004d1b584fbd45c5044887dcae46/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d653039346132333231323136303031352e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" alt="滚动示例3.gif" data-canonical-src="http://upload-images.jianshu.io/upload_images/1271831-e094a23212160015.gif?imageMogr2/auto-orient/strip" style="max-width:100%;"></a></p>
+
+<p><a href="https://camo.githubusercontent.com/5b653bb74aec0b3f170b1ef6527cb4b76754ce62/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d383239313636663339313161646666362e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" target="_blank"><img src="https://camo.githubusercontent.com/5b653bb74aec0b3f170b1ef6527cb4b76754ce62/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d383239313636663339313161646666362e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" alt="滚动示例4.gif" data-canonical-src="http://upload-images.jianshu.io/upload_images/1271831-829166f3911adff6.gif?imageMogr2/auto-orient/strip" style="max-width:100%;"></a><a href="https://camo.githubusercontent.com/6d67e3c75d405b63af096722eb3b8731396bed52/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d336632623864633330626630313362312e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" target="_blank"><img src="https://camo.githubusercontent.com/6d67e3c75d405b63af096722eb3b8731396bed52/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d336632623864633330626630313362312e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" alt="滚动示例5.gif" data-canonical-src="http://upload-images.jianshu.io/upload_images/1271831-3f2b8dc30bf013b1.gif?imageMogr2/auto-orient/strip" style="max-width:100%;"></a><a href="https://camo.githubusercontent.com/3983d1c51463654efe68604bbc3ecfb35ba4c75a/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d366433376236623536393965363361362e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" target="_blank"><img src="https://camo.githubusercontent.com/3983d1c51463654efe68604bbc3ecfb35ba4c75a/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d366433376236623536393965363361362e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" alt="滚动示例6.gif" data-canonical-src="http://upload-images.jianshu.io/upload_images/1271831-6d37b6b5699e63a6.gif?imageMogr2/auto-orient/strip" style="max-width:100%;"></a></p>
+
+<p><a href="https://camo.githubusercontent.com/8270eb08f70dc23761b1df2fc3dcce308dd48f51/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d643463303961363662643834306665342e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" target="_blank"><img src="https://camo.githubusercontent.com/8270eb08f70dc23761b1df2fc3dcce308dd48f51/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d643463303961363662643834306665342e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" alt="滚动示例7.gif" data-canonical-src="http://upload-images.jianshu.io/upload_images/1271831-d4c09a66bd840fe4.gif?imageMogr2/auto-orient/strip" style="max-width:100%;"></a>
+<a href="https://camo.githubusercontent.com/eded9f0676d877ce10e60ad23e3d2e6efd3d5930/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d633662316435343239356634626362312e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" target="_blank"><img src="https://camo.githubusercontent.com/eded9f0676d877ce10e60ad23e3d2e6efd3d5930/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313237313833312d633662316435343239356634626362312e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" alt="滚动示例8.gif" data-canonical-src="http://upload-images.jianshu.io/upload_images/1271831-c6b1d54295f4bcb1.gif?imageMogr2/auto-orient/strip" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h3><a id="user-content-可以简单快速灵活的实现上图中的效果" class="anchor" href="#可以简单快速灵活的实现上图中的效果" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>可以简单快速灵活的实现上图中的效果</h3>
+
+<hr>
+
+<h3><a id="user-content-书写思路移步" class="anchor" href="#书写思路移步" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>书写思路移步</h3>
+
+<h3><a id="user-content-简书1" class="anchor" href="#简书1" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="http://www.jianshu.com/p/b84f4dd96d0c">简书1</a></h3>
+
+<h2><a id="user-content-requirements" class="anchor" href="#requirements" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Requirements</h2>
+
+<ul>
+<li>iOS 7.0+ </li>
+</ul>
+
+<h2><a id="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Installation</h2>
+
+<h3><a id="user-content-直接将下载文件的zjscrollpageview文件夹下的文件拖进您的项目中然后import-zjscrollpageviewh就可以使用了" class="anchor" href="#直接将下载文件的zjscrollpageview文件夹下的文件拖进您的项目中然后import-zjscrollpageviewh就可以使用了" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>直接将下载文件的ZJScrollPageView文件夹下的文件拖进您的项目中然后#import "ZJScrollPageView.h"就可以使用了</h3>
+
+<h2><a id="user-content-usage" class="anchor" href="#usage" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>usage</h2>
+
+<h4><a id="user-content-一-使用scrollpageview--提供了各种效果的组合但是不能修改segmentview和contentview的相对位置两者是结合在一起的" class="anchor" href="#一-使用scrollpageview--提供了各种效果的组合但是不能修改segmentview和contentview的相对位置两者是结合在一起的" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>一. 使用ScrollPageView , 提供了各种效果的组合,但是不能修改segmentView和ContentView的相对位置,两者是结合在一起的</h4>
+
+<pre><code>- (void)viewDidLoad {
+[super viewDidLoad];
+self.title = @"效果示例";
+//1.必要的设置, 如果没有设置可能导致内容显示不正常
+self.automaticallyAdjustsScrollViewInsets = NO;
+// 2.设置需要的效果分类
+ZJSegmentStyle *style = [[ZJSegmentStyle alloc] init];
+// 缩放标题
+style.scaleTitle = YES;
+// 颜色渐变
+style.gradualChangeTitleColor = YES;
+// 3.设置子控制器 --- 注意子控制器需要设置title, 将用于对应的tag显示title
+NSArray *childVcs = [NSArray arrayWithArray:[self setupChildVcAndTitle]];
+// 4.初始化
+ZJScrollPageView *scrollPageView = [[ZJScrollPageView alloc] initWithFrame:CGRectMake(0, 64.0, self.view.bounds.size.width, self.view.bounds.size.height - 64.0) segmentStyle:style childVcs:childVcs parentViewController:self];
+// 5. 添加scrollPageView
+[self.view addSubview:scrollPageView];
+</code></pre>
+
+<p>}</p>
+
+<h4><a id="user-content-二-使用-zjscrollsegmentview-和-zjcontentview-提供相同的效果组合-但是同时可以分离开segmentview和contentview可以单独设置他们的frame-使用更灵活" class="anchor" href="#二-使用-zjscrollsegmentview-和-zjcontentview-提供相同的效果组合-但是同时可以分离开segmentview和contentview可以单独设置他们的frame-使用更灵活" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>二 使用 ZJScrollSegmentView 和 ZJContentView, 提供相同的效果组合, 但是同时可以分离开segmentView和contentView,可以单独设置他们的frame, 使用更灵活</h4>
+
+<pre><code>- (void)viewDidLoad {
+[super viewDidLoad];
+self.title = @"效果示例";
+
+//必要的设置, 如果没有设置可能导致内容显示不正常
+self.automaticallyAdjustsScrollViewInsets = NO;
+[self setupSegmentView];
+[self setupContentView];
+
+}
+</code></pre>
+
+<h3><a id="user-content-setupsegmentview" class="anchor" href="#setupsegmentview" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>setupSegmentView</h3>
+
+<pre><code>    // 注意: 一定要避免循环引用!!
+__weak typeof(self) weakSelf = self;
+ZJScrollSegmentView *segment = [[ZJScrollSegmentView alloc] initWithFrame:CGRectMake(0, 64.0, 160.0, 28.0) segmentStyle:style titles:titles titleDidClick:^(UILabel *label, NSInteger index) {
+
+    [weakSelf.contentView setContentOffSet:CGPointMake(weakSelf.contentView.bounds.size.width * index, 0.0) animated:YES];
+
+}];
+// 自定义标题的样式
+segment.layer.cornerRadius = 14.0;
+segment.backgroundColor = [UIColor redColor];
+// 当然推荐直接设置背景图片的方式
+//    segment.backgroundImage = [UIImage imageNamed:@"extraBtnBackgroundImage"];
+
+self.segmentView = segment;
+self.navigationItem.titleView = self.segmentView;
+</code></pre>
+
+<h3><a id="user-content-setupcontentview" class="anchor" href="#setupcontentview" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>setupContentView</h3>
+
+<pre><code>    NSArray *childVcs = [self setupChildVcAndTitle];
+ZJContentView *content = [[ZJContentView alloc] initWithFrame:CGRectMake(0.0, 64.0, self.view.bounds.size.width, self.view.bounds.size.height - 64.0) childVcs:childVcs segmentView:self.segmentView parentViewController:self];
+self.contentView = content;
+[self.view addSubview:self.contentView];
+</code></pre>
+
+<h3><a id="user-content-如果您在使用过程中遇到问题-请联系我" class="anchor" href="#如果您在使用过程中遇到问题-请联系我" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>如果您在使用过程中遇到问题, 请联系我</h3>
+
+<h4><a id="user-content-qq854136959-邮箱-854136959qqcom" class="anchor" href="#qq854136959-邮箱-854136959qqcom" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>QQ:854136959 邮箱: <a href="mailto:854136959@qq.com">854136959@qq.com</a></h4>
+
+<h4><a id="user-content-如果对您有帮助请随手给个star鼓励一下" class="anchor" href="#如果对您有帮助请随手给个star鼓励一下" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>如果对您有帮助,请随手给个star鼓励一下</h4>
+
+<h2><a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>License</h2>
+
+<p>ScrollPageView is released under the MIT license. See LICENSE for details.</p>
+</article></div>
