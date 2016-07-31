@@ -1,0 +1,4 @@
+{"identity":{"generator":"Crashlytics Mac SDK/3.3.4","build_version":"82","display_version":"3.3.4","api_key":"ec54a838ebfd0587c6592636fd3bc49aeaa00cba","started_at":1469934876,"session_id":"9d89c605433246f98741f6c98ab179b3","install_id":"77DCC8AA-50F4-4372-9826-E52334BA50A7","beta_token":null}}
+{"host":{"model":"iMac16,1","machine":"x86_64","cpu":"Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz","os_build_version":"15G31","os_display_version":"10.11.6","platform":"mac","locale":"en_CN"}}
+{"application":{"bundle_id":"com.iiiyu.ohmystar","custom_bundle_id":null,"build_version":"1260","display_version":"1.1.9","extension_id":null}}
+{"executable":{"architecture":"x86_64","uuid":"8f78ac7c23a43385ab6a58d32ea56c27","base":4424962048,"size":1630208,"encrypted":false,"minimum_sdk_version":"10.9.0","built_sdk_version":"10.11.0"}}

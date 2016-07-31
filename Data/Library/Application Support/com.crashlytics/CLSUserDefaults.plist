@@ -3,26 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>com.crashlytics.insights.lastmaintenancedate</key>
-	<date>2016-05-19T05:53:43Z</date>
+	<date>2016-07-31T03:15:04Z</date>
 	<key>com.crashlytics.insights.lastsessionidentifier</key>
-	<string>20bdf49ea2794086ad5fa1e383b6ea5b</string>
+	<string>9d89c605433246f98741f6c98ab179b3</string>
 	<key>com.crashlytics.insights.lastsessionmetadata</key>
 	<data>
-	eyJidW5kbGVfaWQiOiJjb20uaWlpeXUub2hteXN0YXIiLCJzZXNzaW9uX2lkIjoiMjBi
-	ZGY0OWVhMjc5NDA4NmFkNWZhMWUzODNiNmVhNWIiLCJhZHZlcnRpc2luZ190cmFja2lu
-	Z19lbmFibGVkIjpmYWxzZSwibG9jYWxlIjoiZW5fQ04iLCJvc19idWlsZCI6IjE1RTY1
+	eyJidW5kbGVfaWQiOiJjb20uaWlpeXUub2hteXN0YXIiLCJzZXNzaW9uX2lkIjoiOWQ4
+	OWM2MDU0MzMyNDZmOTg3NDFmNmM5OGFiMTc5YjMiLCJhZHZlcnRpc2luZ190cmFja2lu
+	Z19lbmFibGVkIjpmYWxzZSwibG9jYWxlIjoiZW5fQ04iLCJvc19idWlsZCI6IjE1RzMx
 	IiwibGlua3NfYWRfc3VwcG9ydCI6ZmFsc2UsInBsYXRmb3JtIjoibWFjIiwiZ2VuZXJh
 	dG9yIjoiQW5zd2VycyBtYWMgU0RLXC8wLjkuMSIsInBsYXRmb3JtX2NvZGUiOjAsImNv
 	cmVzIjo0LCJpbnN0YW5jZV9pZCI6ImEyZDZjZWRiMTViZWFjNTVkY2Y1OWFjODAwMWNk
 	NzQxYjI4NjkzMDAiLCJpbnN0YWxsX2lkIjoiNzdEQ0M4QUEtNTBGNC00MzcyLTk4MjYt
 	RTUyMzM0QkE1MEE3IiwiamFpbGJyb2tlbiI6ZmFsc2UsIm1vZGVsIjoiaU1hYzE2LDEi
-	LCJvc192ZXJzaW9uIjoiMTAuMTEuNCIsInN0YXJ0ZWRfYXQiOjE0NjM2MzcyMDIsImJ1
+	LCJvc192ZXJzaW9uIjoiMTAuMTEuNiIsInN0YXJ0ZWRfYXQiOjE0Njk5MzQ4NzYsImJ1
 	bmRsZV92ZXJzaW9uIjoiMTI2MCIsImFwaV9rZXkiOiJlYzU0YTgzOGViZmQwNTg3YzY1
 	OTI2MzZmZDNiYzQ5YWVhYTAwY2JhIiwibWFjaGluZSI6ImlNYWMxNiwxIiwiYnVuZGxl
 	X3Nob3J0X3ZlcnNpb24iOiIxLjEuOSJ9
 	</data>
 	<key>com.crashlytics.insights.lastsessiontimestamp</key>
-	<integer>1463637202116</integer>
+	<integer>1469934876218</integer>
 	<key>com.crashlytics.iuuid</key>
 	<string>77DCC8AA-50F4-4372-9826-E52334BA50A7</string>
 </dict>

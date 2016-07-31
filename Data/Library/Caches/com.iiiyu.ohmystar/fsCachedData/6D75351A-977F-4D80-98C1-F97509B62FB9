@@ -1,0 +1,214 @@
+<div class="announce instapaper_body md" data-path="README.md" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-papreferences" class="anchor" href="#papreferences" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PAPreferences</h1>
+
+<p>An easy way to store user preferences using NSUserDefaults.</p>
+
+<p>PAPreferences maps <code>dynamic</code> properties onto NSUserDefaults getters and setters so that you can access defaults as if they were regular properties on an object. That object is normally a singleton since you typically want a single set of preferences for the entire app.</p>
+
+<p>Works with iOS and OSX.</p>
+
+<h2><a id="user-content-adding-papreferences-to-your-project" class="anchor" href="#adding-papreferences-to-your-project" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding PAPreferences to your project</h2>
+
+<p>The simplest way to add PAPreferences to your project is to use <a href="http://cocoapods.org">CocoaPods</a>. 
+Add the following line to your Podfile:</p>
+
+<pre><code>    pod 'PAPreferences'
+</code></pre>
+
+<p>If you'd prefer to manually integrate it, just copy <code>PAPreferences/*.{m,h}</code> into your project.</p>
+
+<h2><a id="user-content-creating-a-preferences-singleton" class="anchor" href="#creating-a-preferences-singleton" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating a Preferences Singleton</h2>
+
+<p>First, create a subclass of PAPreferences with properties for your settings (note that all properties should have an <code>assign</code> storage specifier):</p>
+
+<div class="highlight highlight-source-objc"><pre>#<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">"</span>PAPreferences.h<span class="pl-pds">"</span></span>
+
+<span class="pl-k">@interface</span> <span class="pl-en">MyPreferences</span> : <span class="pl-e">PAPreferences</span>
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">assign</span>) <span class="pl-c1">NSString</span> *theme;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">assign</span>) <span class="pl-c1">NSArray</span> *favorites;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">assign</span>) <span class="pl-k">BOOL</span> hasSeenIntro;
+<span class="pl-k">@end</span></pre></div>
+
+<p>In the implementation file, mark each property as dynamic:</p>
+
+<div class="highlight highlight-source-objc"><pre>#<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">"</span>MyPreferences.h<span class="pl-pds">"</span></span>
+
+<span class="pl-k">@implementation</span> <span class="pl-en">MyPreferences</span>
+<span class="pl-k">@dynamic</span> theme;
+<span class="pl-k">@dynamic</span> favorites;
+<span class="pl-k">@dynamic</span> hasSeenIntro;
+<span class="pl-k">@end</span></pre></div>
+
+<h2><a id="user-content-accessing-the-preferences" class="anchor" href="#accessing-the-preferences" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Accessing the Preferences</h2>
+
+<p>The <code>sharedInstance</code> class method can be used to access the singleton:</p>
+
+<div class="highlight highlight-source-objc"><pre>    <span class="pl-k">if</span> (![MyPreferences <span class="pl-c1">sharedInstance</span>].hasSeenIntro) {
+        <span class="pl-c">// ...</span>
+        [MyPreferences <span class="pl-c1">sharedInstance</span>].<span class="pl-smi">hasSeenIntro</span> = <span class="pl-c1">YES</span>;
+    }</pre></div>
+
+<h2><a id="user-content-supported-property-types" class="anchor" href="#supported-property-types" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supported Property Types</h2>
+
+<p>PAPreferences supports the following property types:</p>
+
+<ul>
+<li>NSInteger</li>
+<li>NSString</li>
+<li>NSArray</li>
+<li>NSDictionary</li>
+<li>NSURL</li>
+<li>NSData</li>
+<li>NSDate</li>
+<li>NSNumber</li>
+<li>BOOL</li>
+<li>float</li>
+<li>double</li>
+<li>Classes conforming to the NSCoding protocol (including NSSecureCoding).</li>
+</ul>
+
+<p>While you can set mutable values for the properties, you will currently get immutable copies back. Just like when using NSUserDefaults directly.</p>
+
+<h2><a id="user-content-updating-ui-when-preferences-change" class="anchor" href="#updating-ui-when-preferences-change" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating UI when Preferences change</h2>
+
+<p>Whenever a change is made to a property, a <code>PAPreferencesDidChangeNotification</code> notification is posted (with its object set to the PAPreferences subclass).</p>
+
+<h2><a id="user-content-how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How It Works</h2>
+
+<p>When a property is first accessed, that selector is mapped to a method that interacts with the NSUserDefaults class. For example, this line:</p>
+
+<div class="highlight highlight-source-objc"><pre>    hasSeenIntro = <span class="pl-c1">YES</span>;</pre></div>
+
+<p>expands to a call to a method that behaves like this:</p>
+
+<div class="highlight highlight-source-objc"><pre>- (<span class="pl-k">void</span>)setHasSeenIntro:(<span class="pl-k">BOOL</span>)value {
+    [[<span class="pl-c1">NSUserDefaults</span> <span class="pl-c1">standardUserDefaults</span>] <span class="pl-c1">setBool:</span>value <span class="pl-c1">forKey:</span><span class="pl-s"><span class="pl-pds">@"</span>hasSeenIntro<span class="pl-pds">"</span></span>];
+    [[<span class="pl-c1">NSNotificationCenter</span> <span class="pl-c1">defaultCenter</span>] <span class="pl-c1">postNotificationName:</span>PAPreferencesDidChangeNotification <span class="pl-c1">object:</span><span class="pl-v">self</span>];
+}</pre></div>
+
+<h2><a id="user-content-setting-defaults" class="anchor" href="#setting-defaults" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting Defaults</h2>
+
+<p>I prefer to set defaults in code, rather than using the traditional NSUserDefaults method.  This is also a useful mechanism to set the first and last version installed for your app. Having these values lets you easily migrate existing users as you add new preferences. Here's an example from my Focus Time app:</p>
+
+<pre><code>- (id)init {
+    if (self = [super init]) {
+        NSString *version = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
+        if (self.firstVersionInstalled == nil) {
+            self.firstVersionInstalled = version;
+
+            // Set defaults for new users
+            self.pomodoroLength = 1500;
+            self.workStartSound = @"alert_gentle_jingle";
+            self.workEndSound = @"alert_ring";
+            // . . .
+        }
+
+        self.lastVersionInstalled = version;
+    }
+    return self;
+}
+</code></pre>
+
+<h2><a id="user-content-working-with-ios-extensions" class="anchor" href="#working-with-ios-extensions" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Working with iOS Extensions</h2>
+
+<p>To share settings between your host app and extension on iOS, you have to use an instance of NSUserDefaults created with <code>initWithSuiteName:</code> rather than <code>standardUserDefaults</code>. To support this, a subclass of PAPreferences can provide a <code>userDefaults</code> implementation of override the default. This is also a good way of caching the instance. Here's a sample implementation:</p>
+
+<div class="highlight highlight-source-objc"><pre>- (<span class="pl-c1">NSUserDefaults</span> *)userDefaults {
+    <span class="pl-k">static</span> <span class="pl-c1">NSUserDefaults</span> *_cachedDefaults;
+    <span class="pl-k">static</span> <span class="pl-c1">dispatch_once_t</span> onceToken;
+    <span class="pl-c1">dispatch_once</span>(&amp;onceToken, ^{
+        _cachedDefaults = [[<span class="pl-c1">NSUserDefaults</span> <span class="pl-c1">alloc</span>] <span class="pl-c1">initWithSuiteName:</span><span class="pl-s"><span class="pl-pds">@"</span>group.com.peerassembly.myapp<span class="pl-pds">"</span></span>];
+    });
+
+    <span class="pl-k">return</span> _cachedDefaults;
+}</pre></div>
+
+<h2><a id="user-content-samples" class="anchor" href="#samples" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Samples</h2>
+
+<p>The best examples of how to use the library are in the unit tests - <code>PAPreferencesTests.m</code>. However, there's a simple example preferences file also included in the iOS sample.</p>
+
+<h2><a id="user-content-troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Troubleshooting</h2>
+
+<p>If you define a property but then forget to add the <code>@dynamic</code> line to its implementation file, then everything will appear to work but in reality the compiler is creating an in-memory storage for the property (as if you'd used a <code>@synthesize</code> line. These properties won't get saved to NSUserDefaults. To protect against this, it's good practice to wrap your class declaration with:</p>
+
+<div class="highlight highlight-source-objc"><pre>#<span class="pl-k">pragma</span> clang diagnostic push
+#<span class="pl-k">pragma</span> clang diagnostic error "-Wobjc-missing-property-synthesis"</pre></div>
+
+<p>and</p>
+
+<div class="highlight highlight-source-objc"><pre>#<span class="pl-k">pragma</span> clang diagnostic pop</pre></div>
+
+<h2><a id="user-content-changelog" class="anchor" href="#changelog" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changelog</h2>
+
+<h3><a id="user-content-05" class="anchor" href="#05" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0.5</h3>
+
+<ul>
+<li>Add the defaults keys to a userInfo dictionary that is passed to NSNotification when a property changes (thanks Jacob Rhoda)</li>
+<li>Fix obscure crash in optimized code build (thanks YuanMing.Zhang)</li>
+</ul>
+
+<h3><a id="user-content-04" class="anchor" href="#04" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0.4</h3>
+
+<ul>
+<li>Add ability to specify an instance of NSUserDefaults other than the standard one. This is important if you're sharing settings with an Extension on iOS</li>
+<li>Fix iOS sample so that unit tests could run on both iOS and OSX (previously, the tests failed on iOS because the initial view controller accessed the singleton before the test ran).</li>
+</ul>
+
+<h3><a id="user-content-03" class="anchor" href="#03" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0.3</h3>
+
+<ul>
+<li>Added automatic synchronize call each time a property is updated (along with a flag to turn it off)</li>
+<li>Add support for NSDate and NSCoding</li>
+<li>Refactor getter &amp; setter helper functions</li>
+</ul>
+
+<p>Thanks to @Janx2 and @creatd for pull requests.</p>
+
+<h3><a id="user-content-02" class="anchor" href="#02" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0.2</h3>
+
+<ul>
+<li>Remove bogus warning for unsupported types</li>
+</ul>
+
+<h3><a id="user-content-01" class="anchor" href="#01" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0.1</h3>
+
+<ul>
+<li> Initial release</li>
+</ul>
+
+<h2><a id="user-content-contact" class="anchor" href="#contact" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contact</h2>
+
+<p>To hear about updates to this and other libraries follow me on Twitter (<a href="http://twitter.com/denishennessy">@denishennessy</a>) or App.net (<a href="http://alpha.app.net/denishennessy">@denishennessy</a>).</p>
+
+<p>If you encounter a bug or just thought of a terrific new feature, then opening a github issue is probably the best way to share it. 
+Actually, the best way is to send me a pull request...</p>
+
+<p>For anything else, email always works: <a href="mailto:denis@peerassembly.com">denis@peerassembly.com</a></p>
+
+<h2><a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>License</h2>
+
+<pre><code>Copyright (c) 2014, Denis Hennessy (Peer Assembly - http://peerassembly.com)
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of Peer Assembly, Denis Hennessy nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL PEER ASSEMBLY OR DENIS HENNESSY BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</code></pre>
+</article></div>
