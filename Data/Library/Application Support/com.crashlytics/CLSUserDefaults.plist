@@ -2,6 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+<<<<<<< HEAD
 	<key>com.crashlytics.insights.lastmaintenancedate</key>
 	<date>2016-07-31T03:15:04Z</date>
 	<key>com.crashlytics.insights.lastsessionidentifier</key>
@@ -23,7 +24,28 @@
 	</data>
 	<key>com.crashlytics.insights.lastsessiontimestamp</key>
 	<integer>1469934876218</integer>
+=======
+	<key>com.crashlytics.insights.lastsessionidentifier</key>
+	<string>74a9dc6d28304449a392ba1c78920971</string>
+	<key>com.crashlytics.insights.lastsessionmetadata</key>
+	<data>
+	eyJidW5kbGVfaWQiOiJjb20uaWlpeXUub2hteXN0YXIiLCJzZXNzaW9uX2lkIjoiNzRh
+	OWRjNmQyODMwNDQ0OWEzOTJiYTFjNzg5MjA5NzEiLCJhZHZlcnRpc2luZ190cmFja2lu
+	Z19lbmFibGVkIjpmYWxzZSwibG9jYWxlIjoiZW5fQ04iLCJvc19idWlsZCI6IjE1RTY1
+	IiwibGlua3NfYWRfc3VwcG9ydCI6ZmFsc2UsInBsYXRmb3JtIjoibWFjIiwiZ2VuZXJh
+	dG9yIjoiQW5zd2VycyBtYWMgU0RLXC8wLjkuMSIsInBsYXRmb3JtX2NvZGUiOjAsImNv
+	cmVzIjo0LCJpbnN0YW5jZV9pZCI6ImEyZDZjZWRiMTViZWFjNTVkY2Y1OWFjODAwMWNk
+	NzQxYjI4NjkzMDAiLCJpbnN0YWxsX2lkIjoiNEQ4QTlCODUtODdDMy00NDk3LUIzRTYt
+	RERCNzQ5NEZDOEUyIiwiamFpbGJyb2tlbiI6ZmFsc2UsIm1vZGVsIjoiTWFjQm9va1By
+	bzExLDEiLCJvc192ZXJzaW9uIjoiMTAuMTEuNCIsInN0YXJ0ZWRfYXQiOjE0NjM3MDM3
+	OTgsImJ1bmRsZV92ZXJzaW9uIjoiMTI2MCIsImFwaV9rZXkiOiJlYzU0YTgzOGViZmQw
+	NTg3YzY1OTI2MzZmZDNiYzQ5YWVhYTAwY2JhIiwibWFjaGluZSI6Ik1hY0Jvb2tQcm8x
+	MSwxIiwiYnVuZGxlX3Nob3J0X3ZlcnNpb24iOiIxLjEuOSJ9
+	</data>
+	<key>com.crashlytics.insights.lastsessiontimestamp</key>
+	<integer>1463703798173</integer>
+>>>>>>> origin/master
 	<key>com.crashlytics.iuuid</key>
-	<string>77DCC8AA-50F4-4372-9826-E52334BA50A7</string>
+	<string>4D8A9B85-87C3-4497-B3E6-DDB7494FC8E2</string>
 </dict>
 </plist>
