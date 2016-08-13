@@ -1,0 +1,203 @@
+<div class="announce instapaper_body md" data-path="README.md" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-ccrequest" class="anchor" href="#ccrequest" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CCRequest</h1>
+
+<p><a href="https://github.com/xincc/CCRequest/blob/master/README-CN.md">中文介绍</a></p>
+
+<p>A dancing HTTP request framework base on AFNetworking 3.x for iOS &amp; MacOS</p>
+
+<h2><a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Features</h2>
+
+<ul>
+<li>Promise</li>
+<li>Cache</li>
+<li>HTTPS</li>
+<li>Asynchronous Model Serializing</li>
+<li>Request Log convenient for Debug</li>
+<li>Request Exception Catching</li>
+</ul>
+
+<h2><a id="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+
+<ul>
+<li>Add HTTP finder to your project.</li>
+<li>Add AFNetworking &amp; YYCache to your podfile. (YYCache is a default cache service and you can use your own cache service by implementing <a href="https://github.com/xincc/CCRequest/blob/master/HTTP/NetworkHelper/Cache/CCCacheProtocol.h">CCCacheProtocol</a> protocol, CocoaLumberjack is recommendatory Log framework but you can ignore it too)</li>
+</ul>
+
+<h2><a id="user-content-usage" class="anchor" href="#usage" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+
+<p>Dancing with promice</p>
+
+<h4><a id="user-content-promisethen" class="anchor" href="#promisethen" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Promise.then</h4>
+
+<div class="highlight highlight-source-objc"><pre><span class="pl-c">// Start first request task.</span>
+
+SamplePHPRequest.new.promise.then(^<span class="pl-k">id</span>(<span class="pl-k">id</span> data){
+
+    <span class="pl-c">// Get result(`Model` or `RawData`) finish by first task.</span>
+    <span class="pl-c">// Then start sencond request task within promise.</span>
+
+    <span class="pl-k">return</span> SamplePHPRequest.<span class="pl-smi">new</span>.<span class="pl-smi">promise</span>;
+
+},^<span class="pl-k">id</span>(CCResponseError *reason){
+
+    <span class="pl-c">// If some bad things happend to first task you can catch it in this scope.</span>
+    <span class="pl-c">// But the error can't stop the promise chain.</span>
+    <span class="pl-c">// Exception(or some thing) will send to next promise(if exist) in return value.</span>
+
+    <span class="pl-k">return</span> reason;
+
+}).then(^<span class="pl-k">id</span>(<span class="pl-k">id</span> data){
+
+    <span class="pl-c">// Got result(`Model` or `RawData` or `Exception`) finish by previous promise.</span>
+    <span class="pl-c">// Then start third request task within promise.</span>
+    <span class="pl-c">// The result finish by third task will not be deal by Fornt End (Just send to server whithout care succeed or not).</span>
+
+    <span class="pl-k">return</span> [[[SamplePHPRequest <span class="pl-c1">new</span>] <span class="pl-c1">bindRequestArgument:</span><span class="pl-c1">nil</span>] <span class="pl-c1">promise</span>];
+
+},<span class="pl-c1">NULL</span>);</pre></div>
+
+<h4><a id="user-content-promisenext" class="anchor" href="#promisenext" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Promise.next</h4>
+
+<div class="highlight highlight-source-objc"><pre><span class="pl-c">// start primise chain</span>
+
+SamplePHPRequest.new.promise.next(^<span class="pl-k">id</span>(<span class="pl-k">id</span> data) {
+
+
+    <span class="pl-c">// Get result(`Model` or `RawData`) finish by first promised task.</span>
+    <span class="pl-c">// These scope will never get errors.    </span>
+    <span class="pl-c1">CCLogInfo</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span><span class="pl-pds">"</span></span>,data);
+
+    <span class="pl-c">// Send data to next node in promise chain encapsulated in return value</span>
+    <span class="pl-k">return</span> data;
+
+}).next(^<span class="pl-k">id</span>(<span class="pl-k">id</span> data){
+
+    <span class="pl-c">// Get result finish by previous promised node.    </span>
+    <span class="pl-c">// Then start third request task within promise.</span>
+
+    <span class="pl-k">return</span> SamplePHPRequest.<span class="pl-smi">new</span>.<span class="pl-smi">promise</span>;
+
+}).next(^<span class="pl-k">id</span>(<span class="pl-k">id</span> data) {
+
+    <span class="pl-c">// Get result(`Model` or `RawData`) finish by previous promised node.    </span>
+    <span class="pl-c1">CCLogInfo</span>(<span class="pl-s"><span class="pl-pds">@"</span>Promise chain succeed<span class="pl-pds">"</span></span>);
+
+    <span class="pl-c">// Must return something, but will not sent to the `catch` node</span>
+    <span class="pl-k">return</span> data;
+
+}).catch(^(CCResponseError *reason) {
+
+    <span class="pl-c">// If some bad things happend to `the whole promise chain`, you can catch it in this scope.</span>
+    <span class="pl-c">// Peomise chain will be interrupted when catching any exception, </span>
+    <span class="pl-c">// which meanse the rest of promise nodes will not be excuted forever.</span>
+
+    <span class="pl-c1">CCLogError</span>(<span class="pl-s"><span class="pl-pds">@"</span>Promise chain failed: <span class="pl-c1">%@</span><span class="pl-pds">"</span></span>,reason);
+});</pre></div>
+
+<h4><a id="user-content-promiseall" class="anchor" href="#promiseall" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Promise.all</h4>
+
+<div class="highlight highlight-source-objc"><pre>[CCPromise <span class="pl-c1">all:</span>@[SampleRequest.new.promise, SamplePHPRequest.new.promise]].then(^<span class="pl-k">id</span>(<span class="pl-k">id</span> data) {
+
+    <span class="pl-c">// If all of the promsie succeed, you can catch their result in this scope.</span>
+    <span class="pl-c">// The data is an unordered array.</span>
+    <span class="pl-c">// Maybe Dictionary is more appropriate, the key is ordered by index in promises.</span>
+
+    <span class="pl-c1">CCLogInfo</span>(<span class="pl-s"><span class="pl-pds">@"</span>Get data: <span class="pl-c1">%@</span><span class="pl-pds">"</span></span>,data);
+
+    <span class="pl-c">// Must return something.</span>
+    <span class="pl-c">// I want to optimize it, please send me any suggestions.</span>
+    <span class="pl-k">return</span> CCPromise.<span class="pl-smi">fulfilled</span>;
+
+}, ^<span class="pl-k">id</span>(CCResponseError *reason) {
+
+    <span class="pl-c">// If some bad things happend to `any promise in anof the promise`, you can catch it in this scope.</span>
+    <span class="pl-c1">CCLogError</span>(<span class="pl-s"><span class="pl-pds">@"</span>Catched Error: <span class="pl-c1">%@</span><span class="pl-pds">"</span></span>,reason);
+    <span class="pl-k">return</span> CCPromise.<span class="pl-smi">rejected</span>;
+
+});</pre></div>
+
+<h4><a id="user-content-normal-way" class="anchor" href="#normal-way" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Normal Way</h4>
+
+<div class="highlight highlight-source-objc"><pre>SamplePHPRequest *request = [SamplePHPRequest <span class="pl-c1">new</span>];
+[[request <span class="pl-c1">requestWithSuccess:</span>^(<span class="pl-k">id</span> result, CCRequest *request) {
+
+} <span class="pl-c1">failure:</span>^(CCResponseError *error, CCRequest *request) {
+    <span class="pl-c1">CCLogInfo</span>(<span class="pl-s"><span class="pl-pds">@"</span>Never invoke the callback if you cancel the request<span class="pl-pds">"</span></span>);
+}] <span class="pl-c1">appendAccessory:</span><span class="pl-v">self</span>];</pre></div>
+
+<h4><a id="user-content-surported-cache-policy" class="anchor" href="#surported-cache-policy" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Surported Cache Policy</h4>
+
+<div class="highlight highlight-source-objc"><pre><span class="pl-k">typedef</span> <span class="pl-en">NS_ENUM</span>(<span class="pl-k">NSUInteger</span>, CCRequestCachePolicy) {
+
+    <span class="pl-c">// Request server immediately</span>
+    CCRequestReloadRemoteDataIgnoringCacheData,
+
+    <span class="pl-c">// Searching cache data first, return if hited data; otherwise request server data</span>
+    CCRequestReturnCacheDataElseReloadRemoteData,
+
+    <span class="pl-c">// Searching cache data first, invoke callbacks if hited data</span>
+    <span class="pl-c">// No matter succeed or not we request server data</span>
+    CCRequestReturnCacheDataThenReloadRemoteData,
+
+    <span class="pl-c">// Request server data first, searching cache data if failed</span>
+    CCRequestReloadRemoteDataElseReturnCacheData,
+};
+
+<span class="pl-c">// Cache Hitting Policy:</span>
+
+<span class="pl-k">typedef</span> <span class="pl-en">NS_ENUM</span>(<span class="pl-k">NSUInteger</span>, CCReturnCachePolicy) {
+
+    <span class="pl-c">// hit by fire time</span>
+    CCReturnCacheDataByFireTime,
+
+    <span class="pl-c">// hit by revalidating fired time if exist</span>
+    CCReloadRevalidatingCacheData
+};
+
+<span class="pl-c">// Cache Write Policy:</span>
+
+<span class="pl-k">typedef</span> <span class="pl-en">NS_ENUM</span>(<span class="pl-k">NSUInteger</span>, CCDataCachePolicy) {
+
+    <span class="pl-c">// Cache Models </span>
+    <span class="pl-c">// Implement NSCoding protocol if you use the default cache service</span>
+    CCCachePolicyModel,
+
+    <span class="pl-c">// Cache raw data</span>
+    <span class="pl-c">// JSON object for CCResponseSerializerTypeJSON</span>
+    <span class="pl-c">// RawData for CCResponseSerializerTypeRawData</span>
+    CCCachePolicyRawData,
+};
+</pre></div>
+
+<h4><a id="user-content-other-advantages" class="anchor" href="#other-advantages" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other advantages</h4>
+
+<ul>
+<li>Surporting implement your request custom validator</li>
+<li>Surporting custom authorization or HTTP header</li>
+<li>Saving your time when facing to dazzling server frameworks</li>
+</ul>
+
+<h4><a id="user-content-sample-codes" class="anchor" href="#sample-codes" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample Codes</h4>
+
+<ul>
+<li><a href="https://github.com/xincc/CCRequest/blob/master/CCRequest/SampleRequest.m">SampleRequest</a></li>
+<li><a href="https://github.com/xincc/CCRequest/blob/master/CCRequest/SamplePHPRequest.m">SamplePHPRequest</a></li>
+</ul>
+
+<h4><a id="user-content-time-to-fill-knife" class="anchor" href="#time-to-fill-knife" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Time to Fill knife</h4>
+
+<ul>
+<li>Please check <a href="https://github.com/xincc/CCRequest/blob/master/HTTP/NetworkHelper/Request/CCRequest.h">CCRequest</a> for more details</li>
+<li>The most recommend way is creating your own Base Class recommend inherited<a href="https://github.com/xincc/CCRequest/blob/master/HTTP/ProtocolHelper/CCCacheRequest.h">CCCacheRequest</a></li>
+<li>There are many places need to optimize.Welcome to create ISSUE or <a href="mailto://xincc.wang@gmail.com">send me a emial</a>. My original intention is resove <code>the vast majority of Networking Request</code> <code>politely</code>, and I am eager for communicating with your design philosophy.</li>
+</ul>
+
+<h2><a id="user-content-todo" class="anchor" href="#todo" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TODO</h2>
+
+<ul>
+<li>Mock solution</li>
+</ul>
+
+<h2><a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>License</h2>
+
+<p>CCRequest is release under the MIT license. See LICENSE for details.</p>
+</article></div>
